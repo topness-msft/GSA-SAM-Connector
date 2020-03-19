@@ -47,18 +47,21 @@
                           "properties": {
                             "firstName": {
                               "type": "string",
-                              "description": "firstName"
+                              "description": "firstName",
+                              "title": "First Name: Past Performance POC"
                             },
                             "lastName": {
                               "type": "string",
-                              "description": "lastName"
+                              "description": "lastName",
+                              "title": "Last Name: Past Performance POC"
                             },
                             "address": {
                               "type": "object",
                               "properties": {
                                 "zip": {
                                   "type": "string",
-                                  "description": "zip"
+                                  "description": "zip",
+                                  "title": "Zip: Past Performance POC"
                                 },
                                 "city": {
                                   "type": "string",
@@ -67,33 +70,40 @@
                                 },
                                 "countryCode": {
                                   "type": "string",
-                                  "description": "countryCode"
+                                  "description": "countryCode",
+                                  "title": "Country Code: Past Performance POC"
                                 },
                                 "stateorProvince": {
                                   "type": "string",
-                                  "description": "stateorProvince"
+                                  "description": "stateorProvince",
+                                  "title": "State Or Province: Past Performance POC"
                                 },
                                 "line1": {
                                   "type": "string",
-                                  "description": "line1"
+                                  "description": "line1",
+                                  "title": "Address Line 1: Past Performance POC"
                                 }
                               },
                               "description": "address"
                             },
                             "usPhone": {
                               "type": "string",
-                              "description": "usPhone"
+                              "description": "usPhone",
+                              "title": "US Phone: Past Performance POC"
                             },
                             "email": {
                               "type": "string",
-                              "description": "email"
+                              "description": "email",
+                              "title": "EMail: Past Performance POC"
                             }
                           },
                           "description": "pastPerformancePoc"
                         },
                         "lastUpdateDate": {
                           "type": "string",
-                          "description": "lastUpdateDate"
+                          "description": "lastUpdateDate",
+                          "title": "Last Update Date",
+                          "format": "date-time"
                         },
                         "businessStartDate": {
                           "type": "string",
@@ -116,27 +126,33 @@
                           "properties": {
                             "zip": {
                               "type": "string",
-                              "description": "zip"
+                              "description": "zip",
+                              "title": "Zip Code: SAM Address"
                             },
                             "city": {
                               "type": "string",
-                              "description": "city"
+                              "description": "city",
+                              "title": "City: SAM Address"
                             },
                             "countryCode": {
                               "type": "string",
-                              "description": "countryCode"
+                              "description": "countryCode",
+                              "title": "Country Code: SAM Address"
                             },
                             "stateorProvince": {
                               "type": "string",
-                              "description": "stateorProvince"
+                              "description": "stateorProvince",
+                              "title": "State Or Province: SAM Address"
                             },
                             "line1": {
                               "type": "string",
-                              "description": "line1"
+                              "description": "line1",
+                              "title": "Address Line 1: SAM Address"
                             },
                             "zipPlus4": {
                               "type": "string",
-                              "description": "zipPlus4"
+                              "description": "zipPlus4",
+                              "title": "Zip + 4: SAM Address"
                             }
                           },
                           "description": "samAddress"
@@ -146,45 +162,54 @@
                           "properties": {
                             "firstName": {
                               "type": "string",
-                              "description": "firstName"
+                              "description": "firstName",
+                              "title": "First Name: Electronic Business POC"
                             },
                             "lastName": {
                               "type": "string",
-                              "description": "lastName"
+                              "description": "lastName",
+                              "title": "Last Name: Electronic Business POC"
                             },
                             "address": {
                               "type": "object",
                               "properties": {
                                 "zip": {
                                   "type": "string",
-                                  "description": "zip"
+                                  "description": "zip",
+                                  "title": "Zip Or Postal Code: : Electronic Business POC"
                                 },
                                 "city": {
                                   "type": "string",
-                                  "description": "city"
+                                  "description": "city",
+                                  "title": "City"
                                 },
                                 "countryCode": {
                                   "type": "string",
-                                  "description": "countryCode"
+                                  "description": "countryCode",
+                                  "title": "Country Code"
                                 },
                                 "stateorProvince": {
                                   "type": "string",
-                                  "description": "stateorProvince"
+                                  "description": "stateorProvince",
+                                  "title": "State Or Province: Electronic Business POC"
                                 },
                                 "line1": {
                                   "type": "string",
-                                  "description": "line1"
+                                  "description": "line1",
+                                  "title": "Address Line 1: Electronic Business POC"
                                 }
                               },
                               "description": "address"
                             },
                             "usPhone": {
                               "type": "string",
-                              "description": "usPhone"
+                              "description": "usPhone",
+                              "title": "US Phone: : Electronic Business POC"
                             },
                             "email": {
                               "type": "string",
-                              "description": "email"
+                              "description": "email",
+                              "title": "Email: Electronic Business POC"
                             }
                           },
                           "description": "electronicBusinessPoc"
@@ -212,11 +237,18 @@
                         },
                         "dunsPlus4": {
                           "type": "string",
-                          "description": "dunsPlus4"
+                          "description": "dunsPlus4",
+                          "title": "DUNS + 4"
                         },
                         "debtSubjectToOffset": {
                           "type": "boolean",
-                          "description": "debtSubjectToOffset"
+                          "description": "debtSubjectToOffset",
+                          "title": "Debt Subject To Offset",
+                          "enum": [
+                            "",
+                            "true",
+                            "false"
+                          ]
                         },
                         "qualifications": {
                           "type": "object",
@@ -229,18 +261,21 @@
                                   "properties": {
                                     "answerText": {
                                       "type": "string",
-                                      "description": "answerText"
+                                      "description": "Yes/No",
+                                      "title": "Far Response: Answer"
                                     },
                                     "section": {
                                       "type": "string",
-                                      "description": "section"
+                                      "description": "section",
+                                      "title": "FAR Response: Subsection"
                                     }
                                   },
                                   "description": "answers"
                                 },
                                 "id": {
                                   "type": "string",
-                                  "description": "id"
+                                  "description": "id",
+                                  "title": "FAR Response - FAR Section"
                                 }
                               },
                               "description": "acass"
@@ -255,11 +290,18 @@
                         },
                         "fiscalYearEndCloseDate": {
                           "type": "string",
-                          "description": "fiscalYearEndCloseDate"
+                          "description": "MM/DD",
+                          "title": "Fiscal Year End Close Date"
                         },
                         "publicDisplay": {
                           "type": "boolean",
-                          "description": "publicDisplay"
+                          "description": "publicDisplay",
+                          "title": "Public Display",
+                          "enum": [
+                            "",
+                            "true",
+                            "false"
+                          ]
                         },
                         "altGovtBusinessPoc": {
                           "type": "object",
@@ -320,63 +362,75 @@
                         },
                         "registrationDate": {
                           "type": "string",
-                          "description": "registrationDate"
+                          "description": "registrationDate",
+                          "title": "Registration Date"
                         },
                         "govtBusinessPoc": {
                           "type": "object",
                           "properties": {
                             "firstName": {
                               "type": "string",
-                              "description": "firstName"
+                              "description": "firstName",
+                              "title": "First Name: Government Business POC"
                             },
                             "lastName": {
                               "type": "string",
-                              "description": "lastName"
+                              "description": "lastName",
+                              "title": "Last Name: Government Business POC"
                             },
                             "address": {
                               "type": "object",
                               "properties": {
                                 "zip": {
                                   "type": "string",
-                                  "description": "zip"
+                                  "description": "zip",
+                                  "title": "Zip Code: Government Business POC"
                                 },
                                 "city": {
                                   "type": "string",
-                                  "description": "city"
+                                  "description": "city",
+                                  "title": "City: Government Business POC"
                                 },
                                 "countryCode": {
                                   "type": "string",
-                                  "description": "countryCode"
+                                  "description": "countryCode",
+                                  "title": "Country Code: Government Business POC"
                                 },
                                 "stateorProvince": {
                                   "type": "string",
-                                  "description": "stateorProvince"
+                                  "description": "stateorProvince",
+                                  "title": "State Or Province: Government Business POC"
                                 },
                                 "line1": {
                                   "type": "string",
-                                  "description": "line1"
+                                  "description": "line1",
+                                  "title": "Address Line 1: Government Business POC"
                                 }
                               },
                               "description": "address"
                             },
                             "usPhone": {
                               "type": "string",
-                              "description": "usPhone"
+                              "description": "usPhone",
+                              "title": "US Phone:"
                             },
                             "email": {
                               "type": "string",
-                              "description": "email"
+                              "description": "email",
+                              "title": "Email: Government Business POC"
                             }
                           },
                           "description": "govtBusinessPoc"
                         },
                         "expirationDate": {
                           "type": "string",
-                          "description": "expirationDate"
+                          "description": "expirationDate",
+                          "title": "Registration Expiration Date"
                         },
                         "purposeOfRegistration": {
                           "type": "string",
-                          "description": "purposeOfRegistration"
+                          "description": "purposeOfRegistration",
+                          "title": "Purpose of Registration"
                         },
                         "companyDivision": {
                           "type": "string",
@@ -385,19 +439,28 @@
                         },
                         "financialAssistanceResponse": {
                           "type": "string",
-                          "description": "financialAssistanceResponse"
+                          "description": "financialAssistanceResponse",
+                          "title": "Financial Assistance Response"
                         },
                         "submissionDate": {
                           "type": "string",
-                          "description": "submissionDate"
+                          "description": "submissionDate",
+                          "title": "Submission Date"
                         },
                         "creditCardUsage": {
                           "type": "boolean",
-                          "description": "creditCardUsage"
+                          "description": "creditCardUsage",
+                          "title": "Credit Card Usage",
+                          "enum": [
+                            "",
+                            "true",
+                            "false"
+                          ]
                         },
                         "countryOfIncorporation": {
                           "type": "string",
-                          "description": "countryOfIncorporation"
+                          "description": "countryOfIncorporation",
+                          "title": "Country of Incorporation"
                         },
                         "businessTypes": {
                           "type": "array",
@@ -635,57 +698,74 @@
                         },
                         "statusMessage": {
                           "type": "string",
-                          "description": "statusMessage"
+                          "description": "statusMessage",
+                          "title": "Status Message"
                         },
                         "stateOfIncorporation": {
                           "type": "string",
-                          "description": "stateOfIncorporation"
+                          "description": "stateOfIncorporation",
+                          "title": "State of Incorporation"
                         },
                         "mailingAddress": {
                           "type": "object",
                           "properties": {
                             "zip": {
                               "type": "string",
-                              "description": "zip"
+                              "description": "zip",
+                              "title": "Mailing Address Zip Code"
                             },
                             "city": {
                               "type": "string",
-                              "description": "city"
+                              "description": "city",
+                              "title": "Mailing Address City"
                             },
                             "countryCode": {
                               "type": "string",
-                              "description": "countryCode"
+                              "description": "countryCode",
+                              "title": "Mailing Address Country Code"
                             },
                             "stateorProvince": {
                               "type": "string",
-                              "description": "stateorProvince"
+                              "description": "stateorProvince",
+                              "title": "Mailing Address State Or Province"
                             },
                             "line2": {
                               "type": "string",
-                              "description": "line2"
+                              "description": "line2",
+                              "title": "Mailing Address Line 2"
                             },
                             "line1": {
                               "type": "string",
-                              "description": "line1"
+                              "description": "line1",
+                              "title": "Mailing Address Line 1"
                             },
                             "zipPlus4": {
                               "type": "string",
-                              "description": "zipPlus4"
+                              "description": "zipPlus4",
+                              "title": "Mailing Address Zip + 4"
                             }
                           },
                           "description": "mailingAddress"
                         },
                         "hasKnownExclusion": {
                           "type": "boolean",
-                          "description": "hasKnownExclusion"
+                          "description": "hasKnownExclusion",
+                          "title": "Has Known Exclusion",
+                          "enum": [
+                            "",
+                            "true",
+                            "false"
+                          ]
                         },
                         "legalBusinessName": {
                           "type": "string",
-                          "description": "legalBusinessName"
+                          "description": "legalBusinessName",
+                          "title": "Legal Business Name"
                         },
                         "duns": {
                           "type": "string",
-                          "description": "duns"
+                          "description": "duns",
+                          "title": "DUNS Number"
                         },
                         "activationDate": {
                           "type": "string",
@@ -705,7 +785,13 @@
                               },
                               "isPrimary": {
                                 "type": "boolean",
-                                "description": "isPrimary"
+                                "description": "isPrimary",
+                                "title": "NAICS Is Primary",
+                                "enum": [
+                                  "",
+                                  "true",
+                                  "false"
+                                ]
                               },
                               "naicsCode": {
                                 "type": "string",
@@ -718,7 +804,8 @@
                         },
                         "status": {
                           "type": "string",
-                          "description": "status"
+                          "description": "status",
+                          "title": "Status"
                         }
                       },
                       "description": "registration"
@@ -876,7 +963,7 @@
                       "status": {
                         "type": "string",
                         "description": "Active or Inactive",
-                        "title": "Statius"
+                        "title": "Status"
                       },
                       "expirationDate": {
                         "type": "string",
