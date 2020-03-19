@@ -3,7 +3,7 @@
   "info": {
     "version": "1.0.0",
     "title": "SAM",
-    "description": "SAM"
+    "description": "Query GSA SAM Data."
   },
   "host": "api.data.gov",
   "basePath": "/",
@@ -17,9 +17,9 @@
   "paths": {
     "/sam/v8/registrations/{registrationId}": {
       "get": {
-        "summary": "Registrations",
-        "description": "Find a registration by its DUN+4 number\n\nParameters:\n\nregistrationId: DUNS+4 number (no '-' sign) of the registration to be fetched \n\n",
-        "operationId": "Registrations",
+        "summary": "Find By DUN+4 Number",
+        "description": "Find a registration by its DUN+4 number.",
+        "operationId": "FindCompany",
         "parameters": [
           {
             "name": "registrationId",
@@ -821,9 +821,9 @@
     },
     "/sam/v3/registrations": {
       "get": {
-        "summary": "Query",
-        "description": "Find a list of business by name.\n\nParameters:\n\nqterms: \nLegal Business Name\nDoing-Business-As Name\nDUNS\nDUNS+4\nCAGE Code\nDoDAAC",
-        "operationId": "Query",
+        "summary": "Search SAM Database",
+        "description": "Find a list of business by name. Search by Legal Business Name, Doing-Business-As Name, DUNS, DUNS+4, CAGE Code, DoDAAC",
+        "operationId": "Search",
         "parameters": [
           {
             "name": "qterms",
