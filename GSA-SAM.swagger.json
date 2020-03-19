@@ -1,0 +1,910 @@
+{
+  "swagger": "2.0",
+  "info": {
+    "version": "1.0.0",
+    "title": "SAM",
+    "description": "SAM"
+  },
+  "host": "api.data.gov",
+  "basePath": "/",
+  "schemes": [
+    "https"
+  ],
+  "consumes": [],
+  "produces": [
+    "application/json"
+  ],
+  "paths": {
+    "/sam/v8/registrations/{registrationId}": {
+      "get": {
+        "summary": "Registrations",
+        "description": "Find a registration by its DUN+4 number\n\nParameters:\n\nregistrationId: DUNS+4 number (no '-' sign) of the registration to be fetched \n\n",
+        "operationId": "Registrations",
+        "parameters": [
+          {
+            "name": "registrationId",
+            "in": "path",
+            "type": "integer",
+            "required": true,
+            "description": "Registration Id",
+            "format": "int32"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "default",
+            "schema": {
+              "type": "object",
+              "properties": {
+                "sam_data": {
+                  "type": "object",
+                  "properties": {
+                    "registration": {
+                      "type": "object",
+                      "properties": {
+                        "pastPerformancePoc": {
+                          "type": "object",
+                          "properties": {
+                            "firstName": {
+                              "type": "string",
+                              "description": "firstName"
+                            },
+                            "lastName": {
+                              "type": "string",
+                              "description": "lastName"
+                            },
+                            "address": {
+                              "type": "object",
+                              "properties": {
+                                "zip": {
+                                  "type": "string",
+                                  "description": "zip"
+                                },
+                                "city": {
+                                  "type": "string",
+                                  "description": "city",
+                                  "title": "Past Performance POC City"
+                                },
+                                "countryCode": {
+                                  "type": "string",
+                                  "description": "countryCode"
+                                },
+                                "stateorProvince": {
+                                  "type": "string",
+                                  "description": "stateorProvince"
+                                },
+                                "line1": {
+                                  "type": "string",
+                                  "description": "line1"
+                                }
+                              },
+                              "description": "address"
+                            },
+                            "usPhone": {
+                              "type": "string",
+                              "description": "usPhone"
+                            },
+                            "email": {
+                              "type": "string",
+                              "description": "email"
+                            }
+                          },
+                          "description": "pastPerformancePoc"
+                        },
+                        "lastUpdateDate": {
+                          "type": "string",
+                          "description": "lastUpdateDate"
+                        },
+                        "businessStartDate": {
+                          "type": "string",
+                          "description": "businessStartDate",
+                          "title": "Business Start Date",
+                          "format": "date-time"
+                        },
+                        "congressionalDistrict": {
+                          "type": "string",
+                          "description": "congressionalDistrict",
+                          "title": "Congressional District"
+                        },
+                        "corporateUrl": {
+                          "type": "string",
+                          "description": "corporateUrl",
+                          "title": "Corporate URL"
+                        },
+                        "samAddress": {
+                          "type": "object",
+                          "properties": {
+                            "zip": {
+                              "type": "string",
+                              "description": "zip"
+                            },
+                            "city": {
+                              "type": "string",
+                              "description": "city"
+                            },
+                            "countryCode": {
+                              "type": "string",
+                              "description": "countryCode"
+                            },
+                            "stateorProvince": {
+                              "type": "string",
+                              "description": "stateorProvince"
+                            },
+                            "line1": {
+                              "type": "string",
+                              "description": "line1"
+                            },
+                            "zipPlus4": {
+                              "type": "string",
+                              "description": "zipPlus4"
+                            }
+                          },
+                          "description": "samAddress"
+                        },
+                        "electronicBusinessPoc": {
+                          "type": "object",
+                          "properties": {
+                            "firstName": {
+                              "type": "string",
+                              "description": "firstName"
+                            },
+                            "lastName": {
+                              "type": "string",
+                              "description": "lastName"
+                            },
+                            "address": {
+                              "type": "object",
+                              "properties": {
+                                "zip": {
+                                  "type": "string",
+                                  "description": "zip"
+                                },
+                                "city": {
+                                  "type": "string",
+                                  "description": "city"
+                                },
+                                "countryCode": {
+                                  "type": "string",
+                                  "description": "countryCode"
+                                },
+                                "stateorProvince": {
+                                  "type": "string",
+                                  "description": "stateorProvince"
+                                },
+                                "line1": {
+                                  "type": "string",
+                                  "description": "line1"
+                                }
+                              },
+                              "description": "address"
+                            },
+                            "usPhone": {
+                              "type": "string",
+                              "description": "usPhone"
+                            },
+                            "email": {
+                              "type": "string",
+                              "description": "email"
+                            }
+                          },
+                          "description": "electronicBusinessPoc"
+                        },
+                        "corporateStructureCode": {
+                          "type": "string",
+                          "description": "corporateStructureCode",
+                          "title": "Corporate Structure Code"
+                        },
+                        "certificationsURL": {
+                          "type": "object",
+                          "properties": {
+                            "pdfUrl": {
+                              "type": "string",
+                              "description": "pdfUrl",
+                              "title": "SAM Certifications PDF URL"
+                            }
+                          },
+                          "description": "certificationsURL"
+                        },
+                        "bondingInformation": {
+                          "type": "object",
+                          "properties": {},
+                          "description": "bondingInformation"
+                        },
+                        "dunsPlus4": {
+                          "type": "string",
+                          "description": "dunsPlus4"
+                        },
+                        "debtSubjectToOffset": {
+                          "type": "boolean",
+                          "description": "debtSubjectToOffset"
+                        },
+                        "qualifications": {
+                          "type": "object",
+                          "properties": {
+                            "acass": {
+                              "type": "object",
+                              "properties": {
+                                "answers": {
+                                  "type": "object",
+                                  "properties": {
+                                    "answerText": {
+                                      "type": "string",
+                                      "description": "answerText"
+                                    },
+                                    "section": {
+                                      "type": "string",
+                                      "description": "section"
+                                    }
+                                  },
+                                  "description": "answers"
+                                },
+                                "id": {
+                                  "type": "string",
+                                  "description": "id"
+                                }
+                              },
+                              "description": "acass"
+                            }
+                          },
+                          "description": "qualifications"
+                        },
+                        "cage": {
+                          "type": "string",
+                          "description": "cage",
+                          "title": "CAGE Code"
+                        },
+                        "fiscalYearEndCloseDate": {
+                          "type": "string",
+                          "description": "fiscalYearEndCloseDate"
+                        },
+                        "publicDisplay": {
+                          "type": "boolean",
+                          "description": "publicDisplay"
+                        },
+                        "altGovtBusinessPoc": {
+                          "type": "object",
+                          "properties": {
+                            "firstName": {
+                              "type": "string",
+                              "description": "firstName",
+                              "title": "First Name: Alternate Gov Business POC"
+                            },
+                            "lastName": {
+                              "type": "string",
+                              "description": "lastName",
+                              "title": "Last Name: Alternate Gov Business POC"
+                            },
+                            "address": {
+                              "type": "object",
+                              "properties": {
+                                "zip": {
+                                  "type": "string",
+                                  "description": "zip",
+                                  "title": "Zip or Postal: Alternate Gov Business POC"
+                                },
+                                "city": {
+                                  "type": "string",
+                                  "description": "",
+                                  "title": "City: Alternate Gov Business POC"
+                                },
+                                "countryCode": {
+                                  "type": "string",
+                                  "description": "countryCode",
+                                  "title": "Country Code: Alternate Gov Business POC"
+                                },
+                                "stateorProvince": {
+                                  "type": "string",
+                                  "description": "stateorProvince",
+                                  "title": "State Or Province: Alternate Gov Business POC"
+                                },
+                                "line1": {
+                                  "type": "string",
+                                  "description": "line1",
+                                  "title": "Address Line 1: Alternate Gov Business POC"
+                                }
+                              },
+                              "description": "address"
+                            },
+                            "usPhone": {
+                              "type": "string",
+                              "description": "usPhone",
+                              "title": "US Phone: Alternate Gov Business POC"
+                            },
+                            "email": {
+                              "type": "string",
+                              "description": "email",
+                              "title": "Email: Alternate Gov Business POC"
+                            }
+                          },
+                          "description": "altGovtBusinessPoc"
+                        },
+                        "registrationDate": {
+                          "type": "string",
+                          "description": "registrationDate"
+                        },
+                        "govtBusinessPoc": {
+                          "type": "object",
+                          "properties": {
+                            "firstName": {
+                              "type": "string",
+                              "description": "firstName"
+                            },
+                            "lastName": {
+                              "type": "string",
+                              "description": "lastName"
+                            },
+                            "address": {
+                              "type": "object",
+                              "properties": {
+                                "zip": {
+                                  "type": "string",
+                                  "description": "zip"
+                                },
+                                "city": {
+                                  "type": "string",
+                                  "description": "city"
+                                },
+                                "countryCode": {
+                                  "type": "string",
+                                  "description": "countryCode"
+                                },
+                                "stateorProvince": {
+                                  "type": "string",
+                                  "description": "stateorProvince"
+                                },
+                                "line1": {
+                                  "type": "string",
+                                  "description": "line1"
+                                }
+                              },
+                              "description": "address"
+                            },
+                            "usPhone": {
+                              "type": "string",
+                              "description": "usPhone"
+                            },
+                            "email": {
+                              "type": "string",
+                              "description": "email"
+                            }
+                          },
+                          "description": "govtBusinessPoc"
+                        },
+                        "expirationDate": {
+                          "type": "string",
+                          "description": "expirationDate"
+                        },
+                        "purposeOfRegistration": {
+                          "type": "string",
+                          "description": "purposeOfRegistration"
+                        },
+                        "companyDivision": {
+                          "type": "string",
+                          "description": "companyDivision",
+                          "title": "Company Division"
+                        },
+                        "financialAssistanceResponse": {
+                          "type": "string",
+                          "description": "financialAssistanceResponse"
+                        },
+                        "submissionDate": {
+                          "type": "string",
+                          "description": "submissionDate"
+                        },
+                        "creditCardUsage": {
+                          "type": "boolean",
+                          "description": "creditCardUsage"
+                        },
+                        "countryOfIncorporation": {
+                          "type": "string",
+                          "description": "countryOfIncorporation"
+                        },
+                        "businessTypes": {
+                          "type": "array",
+                          "items": {
+                            "type": "string",
+                            "title": "Business Type Codes"
+                          },
+                          "description": "businessTypes"
+                        },
+                        "certifications": {
+                          "type": "object",
+                          "properties": {
+                            "pdfUrl": {
+                              "type": "string",
+                              "description": "pdfUrl",
+                              "title": "SAM DFAR Responses PDF URL"
+                            },
+                            "farResponses": {
+                              "type": "array",
+                              "items": {
+                                "type": "object",
+                                "properties": {
+                                  "answers": {
+                                    "type": "array",
+                                    "items": {
+                                      "type": "object",
+                                      "properties": {
+                                        "answerText": {
+                                          "type": "string",
+                                          "description": "answerText"
+                                        },
+                                        "section": {
+                                          "type": "string",
+                                          "description": "section"
+                                        },
+                                        "naics": {
+                                          "type": "array",
+                                          "items": {
+                                            "type": "object",
+                                            "properties": {
+                                              "naicsName": {
+                                                "type": "string",
+                                                "description": "naicsName"
+                                              },
+                                              "isPrimary": {
+                                                "type": "boolean",
+                                                "description": "isPrimary"
+                                              },
+                                              "ExcpCounter": {
+                                                "type": "integer",
+                                                "format": "int32",
+                                                "description": "ExcpCounter"
+                                              },
+                                              "isSmallBusiness": {
+                                                "type": "string",
+                                                "description": "isSmallBusiness"
+                                              },
+                                              "naicsCode": {
+                                                "type": "integer",
+                                                "format": "int32",
+                                                "description": "naicsCode"
+                                              }
+                                            }
+                                          },
+                                          "description": "naics"
+                                        },
+                                        "samFacility": {
+                                          "type": "array",
+                                          "items": {
+                                            "type": "object",
+                                            "properties": {
+                                              "ownerName": {
+                                                "type": "string",
+                                                "description": "ownerName"
+                                              },
+                                              "ownerAddress": {
+                                                "type": "object",
+                                                "properties": {
+                                                  "zip": {
+                                                    "type": "integer",
+                                                    "format": "int32",
+                                                    "description": "zip"
+                                                  },
+                                                  "stateOrProvince": {
+                                                    "type": "string",
+                                                    "description": "stateOrProvince"
+                                                  },
+                                                  "city": {
+                                                    "type": "string",
+                                                    "description": "city"
+                                                  },
+                                                  "countryCode": {
+                                                    "type": "string",
+                                                    "description": "countryCode"
+                                                  },
+                                                  "line1": {
+                                                    "type": "string",
+                                                    "description": "line1"
+                                                  }
+                                                },
+                                                "description": "ownerAddress"
+                                              },
+                                              "plantAddress": {
+                                                "type": "object",
+                                                "properties": {
+                                                  "zip": {
+                                                    "type": "integer",
+                                                    "format": "int32",
+                                                    "description": "zip"
+                                                  },
+                                                  "stateOrProvince": {
+                                                    "type": "string",
+                                                    "description": "stateOrProvince"
+                                                  },
+                                                  "city": {
+                                                    "type": "string",
+                                                    "description": "city"
+                                                  },
+                                                  "countryCode": {
+                                                    "type": "string",
+                                                    "description": "countryCode"
+                                                  },
+                                                  "line2": {
+                                                    "type": "string",
+                                                    "description": "line2"
+                                                  },
+                                                  "line1": {
+                                                    "type": "string",
+                                                    "description": "line1"
+                                                  }
+                                                },
+                                                "description": "plantAddress"
+                                              }
+                                            }
+                                          },
+                                          "description": "samFacility"
+                                        },
+                                        "immediateOwnerCage": {
+                                          "type": "object",
+                                          "properties": {
+                                            "legalBusinessName": {
+                                              "type": "string",
+                                              "description": "legalBusinessName"
+                                            },
+                                            "cageCode": {
+                                              "type": "string",
+                                              "description": "cageCode"
+                                            },
+                                            "hasOwner": {
+                                              "type": "string",
+                                              "description": "hasOwner"
+                                            }
+                                          },
+                                          "description": "immediateOwnerCage"
+                                        },
+                                        "highestLevelOwnerCage": {
+                                          "type": "object",
+                                          "properties": {
+                                            "legalBusinessName": {
+                                              "type": "string",
+                                              "description": "legalBusinessName"
+                                            },
+                                            "ncageCode": {
+                                              "type": "string",
+                                              "description": "ncageCode"
+                                            }
+                                          },
+                                          "description": "highestLevelOwnerCage"
+                                        },
+                                        "Company": {
+                                          "type": "object",
+                                          "properties": {
+                                            "name": {
+                                              "type": "string",
+                                              "description": "name"
+                                            },
+                                            "tin": {
+                                              "type": "string",
+                                              "description": "tin"
+                                            }
+                                          },
+                                          "description": "Company"
+                                        }
+                                      }
+                                    },
+                                    "description": "answers"
+                                  },
+                                  "id": {
+                                    "type": "string",
+                                    "description": "id",
+                                    "title": "FAR Responses ID"
+                                  }
+                                }
+                              },
+                              "description": "farResponses"
+                            },
+                            "dfarResponses": {
+                              "type": "array",
+                              "items": {
+                                "type": "object",
+                                "properties": {
+                                  "answers": {
+                                    "type": "array",
+                                    "items": {
+                                      "type": "object",
+                                      "properties": {
+                                        "answerText": {
+                                          "type": "string",
+                                          "description": "answerText"
+                                        },
+                                        "section": {
+                                          "type": "string",
+                                          "description": "section"
+                                        }
+                                      }
+                                    },
+                                    "description": "answers"
+                                  },
+                                  "id": {
+                                    "type": "string",
+                                    "description": "id",
+                                    "title": "DFAR Responses ID"
+                                  }
+                                }
+                              },
+                              "description": "dfarResponses"
+                            }
+                          },
+                          "description": "certifications"
+                        },
+                        "corporateStructureName": {
+                          "type": "string",
+                          "description": "corporateStructureName",
+                          "title": "Corporate Structure Name"
+                        },
+                        "statusMessage": {
+                          "type": "string",
+                          "description": "statusMessage"
+                        },
+                        "stateOfIncorporation": {
+                          "type": "string",
+                          "description": "stateOfIncorporation"
+                        },
+                        "mailingAddress": {
+                          "type": "object",
+                          "properties": {
+                            "zip": {
+                              "type": "string",
+                              "description": "zip"
+                            },
+                            "city": {
+                              "type": "string",
+                              "description": "city"
+                            },
+                            "countryCode": {
+                              "type": "string",
+                              "description": "countryCode"
+                            },
+                            "stateorProvince": {
+                              "type": "string",
+                              "description": "stateorProvince"
+                            },
+                            "line2": {
+                              "type": "string",
+                              "description": "line2"
+                            },
+                            "line1": {
+                              "type": "string",
+                              "description": "line1"
+                            },
+                            "zipPlus4": {
+                              "type": "string",
+                              "description": "zipPlus4"
+                            }
+                          },
+                          "description": "mailingAddress"
+                        },
+                        "hasKnownExclusion": {
+                          "type": "boolean",
+                          "description": "hasKnownExclusion"
+                        },
+                        "legalBusinessName": {
+                          "type": "string",
+                          "description": "legalBusinessName"
+                        },
+                        "duns": {
+                          "type": "string",
+                          "description": "duns"
+                        },
+                        "activationDate": {
+                          "type": "string",
+                          "description": "activationDate",
+                          "title": "Activation Date",
+                          "format": "date-time"
+                        },
+                        "naics": {
+                          "type": "array",
+                          "items": {
+                            "type": "object",
+                            "properties": {
+                              "naicsName": {
+                                "type": "string",
+                                "description": "naicsName",
+                                "title": "NAICS Name"
+                              },
+                              "isPrimary": {
+                                "type": "boolean",
+                                "description": "isPrimary"
+                              },
+                              "naicsCode": {
+                                "type": "string",
+                                "description": "naicsCode",
+                                "title": "NAICS Code"
+                              }
+                            }
+                          },
+                          "description": "naics"
+                        },
+                        "status": {
+                          "type": "string",
+                          "description": "status"
+                        }
+                      },
+                      "description": "registration"
+                    }
+                  },
+                  "description": "sam_data"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/sam/v3/registrations": {
+      "get": {
+        "summary": "Query",
+        "description": "Find a list of business by name.\n\nParameters:\n\nqterms: \nLegal Business Name\nDoing-Business-As Name\nDUNS\nDUNS+4\nCAGE Code\nDoDAAC",
+        "operationId": "Query",
+        "parameters": [
+          {
+            "name": "qterms",
+            "in": "query",
+            "type": "string",
+            "required": true,
+            "description": "Query Parameter",
+            "x-ms-summary": "See detail here: https://gsa.github.io/sam_api/sam/search.html"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "default",
+            "schema": {
+              "type": "object",
+              "properties": {
+                "links": {
+                  "type": "array",
+                  "items": {
+                    "type": "object",
+                    "properties": {
+                      "rel": {
+                        "type": "string",
+                        "description": "rel",
+                        "title": "",
+                        "x-ms-visibility": "internal"
+                      },
+                      "href": {
+                        "type": "string",
+                        "description": "href",
+                        "title": "",
+                        "x-ms-visibility": "internal"
+                      }
+                    }
+                  },
+                  "description": "links"
+                },
+                "results": {
+                  "type": "array",
+                  "items": {
+                    "type": "object",
+                    "properties": {
+                      "cage": {
+                        "type": "string",
+                        "description": "cage",
+                        "title": "CAGE Code"
+                      },
+                      "hasKnownExclusion": {
+                        "type": "boolean",
+                        "description": "hasKnownExclusion",
+                        "title": "Has Known Exclusion",
+                        "enum": [
+                          "",
+                          "true",
+                          "false"
+                        ]
+                      },
+                      "legalBusinessName": {
+                        "type": "string",
+                        "description": "legalBusinessName",
+                        "title": "Legal Business Name"
+                      },
+                      "duns": {
+                        "type": "string",
+                        "description": "duns",
+                        "title": "DUNS"
+                      },
+                      "samAddress": {
+                        "type": "object",
+                        "properties": {
+                          "city": {
+                            "type": "string",
+                            "description": "city",
+                            "title": "City"
+                          },
+                          "countryCode": {
+                            "type": "string",
+                            "description": "countryCode",
+                            "title": "Country Code"
+                          },
+                          "line1": {
+                            "type": "string",
+                            "description": "line1",
+                            "title": "Address Line 1"
+                          },
+                          "zip": {
+                            "type": "string",
+                            "description": "zip",
+                            "title": "Zip or Postal Code"
+                          },
+                          "stateOrProvince": {
+                            "type": "string",
+                            "description": "stateOrProvince",
+                            "title": "State Or Province"
+                          },
+                          "zip4": {
+                            "type": "string",
+                            "description": "zip4",
+                            "title": "Zip + 4"
+                          }
+                        },
+                        "description": "samAddress"
+                      },
+                      "links": {
+                        "type": "array",
+                        "items": {
+                          "type": "object",
+                          "properties": {
+                            "rel": {
+                              "type": "string",
+                              "description": "rel"
+                            },
+                            "href": {
+                              "type": "string",
+                              "description": "href"
+                            }
+                          }
+                        },
+                        "description": "links"
+                      },
+                      "debtSubjectToOffset": {
+                        "type": "boolean",
+                        "description": "debtSubjectToOffset",
+                        "title": "",
+                        "x-ms-visibility": "internal",
+                        "enum": [
+                          "",
+                          "true",
+                          "false"
+                        ]
+                      },
+                      "duns_plus4": {
+                        "type": "string",
+                        "description": "duns_plus4",
+                        "title": "DUNS + 4"
+                      },
+                      "status": {
+                        "type": "string",
+                        "description": "Active or Inactive",
+                        "title": "Statius"
+                      },
+                      "expirationDate": {
+                        "type": "string",
+                        "description": "expirationDate",
+                        "title": "Expiration Date",
+                        "format": "date-time"
+                      }
+                    }
+                  },
+                  "description": "results"
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  },
+  "definitions": {},
+  "parameters": {},
+  "responses": {},
+  "securityDefinitions": {
+    "api_key": {
+      "type": "apiKey",
+      "in": "query",
+      "name": "api_key"
+    }
+  },
+  "security": [],
+  "tags": []
+}
