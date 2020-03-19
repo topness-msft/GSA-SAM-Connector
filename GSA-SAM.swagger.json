@@ -769,7 +769,7 @@
                         },
                         "activationDate": {
                           "type": "string",
-                          "description": "activationDate",
+                          "description": "The date on which the entity's registration went active after all validations were completed. ISO-8601-formatted date",
                           "title": "Activation Date",
                           "format": "date-time"
                         },
@@ -868,13 +868,13 @@
                     "properties": {
                       "cage": {
                         "type": "string",
-                        "description": "cage",
-                        "title": "CAGE Code"
+                        "description": "The Contractor and Government Entity (CAGE) Code or NATO Commercial and Government Entity (NCAGE) Code. This number is assigned to the registration if one does not already exist.",
+                        "title": "CAGE/NCAGE code"
                       },
                       "hasKnownExclusion": {
                         "type": "boolean",
-                        "description": "hasKnownExclusion",
-                        "title": "Has Known Exclusion",
+                        "description": "True or False value depending on whether the entity has had Exclusion created against it or not.",
+                        "title": "Has Active Exclusion",
                         "enum": [
                           "",
                           "true",
@@ -883,12 +883,12 @@
                       },
                       "legalBusinessName": {
                         "type": "string",
-                        "description": "legalBusinessName",
+                        "description": "The name that has been registered for the organization at Dun and Bradstreet (D&B).",
                         "title": "Legal Business Name"
                       },
                       "duns": {
                         "type": "string",
-                        "description": "duns",
+                        "description": "Data Universal Numbering System (DUNS) is a unique nine digit number that is administered by Dun and Bradstreet (D&B) and is a required data element for all registrants in SAM.",
                         "title": "DUNS"
                       },
                       "samAddress": {
@@ -896,32 +896,32 @@
                         "properties": {
                           "city": {
                             "type": "string",
-                            "description": "city",
+                            "description": "The address registered for the entity at Dun and Bradstreet (D&B).",
                             "title": "City"
                           },
                           "countryCode": {
                             "type": "string",
-                            "description": "countryCode",
+                            "description": "The address registered for the entity at Dun and Bradstreet (D&B).",
                             "title": "Country Code"
                           },
                           "line1": {
                             "type": "string",
-                            "description": "line1",
+                            "description": "The address registered for the entity at Dun and Bradstreet (D&B).",
                             "title": "Address Line 1"
                           },
                           "zip": {
                             "type": "string",
-                            "description": "zip",
+                            "description": "The address registered for the entity at Dun and Bradstreet (D&B).",
                             "title": "Zip or Postal Code"
                           },
                           "stateOrProvince": {
                             "type": "string",
-                            "description": "stateOrProvince",
+                            "description": "The address registered for the entity at Dun and Bradstreet (D&B).",
                             "title": "State Or Province"
                           },
                           "zip4": {
                             "type": "string",
-                            "description": "zip4",
+                            "description": "The address registered for the entity at Dun and Bradstreet (D&B).",
                             "title": "Zip + 4"
                           }
                         },
@@ -946,8 +946,8 @@
                       },
                       "debtSubjectToOffset": {
                         "type": "boolean",
-                        "description": "debtSubjectToOffset",
-                        "title": "",
+                        "description": "True or False value based on whether the Department of Treasury has indicated the entity has Delinquent Federal Debt or not.",
+                        "title": "Debt Subject to Offset Indicator",
                         "x-ms-visibility": "internal",
                         "enum": [
                           "",
@@ -957,17 +957,17 @@
                       },
                       "duns_plus4": {
                         "type": "string",
-                        "description": "duns_plus4",
+                        "description": "The DUNS+4 is a user generated four digit number created if the registered entity only has one physical location but more than one bank account.",
                         "title": "DUNS + 4"
                       },
                       "status": {
                         "type": "string",
-                        "description": "Active or Inactive",
+                        "description": "The current status of the registration as it appears in SAM. Options are: Work In Progress, Submitted, Active, Inactive.",
                         "title": "Status"
                       },
                       "expirationDate": {
                         "type": "string",
-                        "description": "expirationDate",
+                        "description": "The date that the entity registration will expire if the user does not update his/her registration. Registrations must be updated every 360 days to remain Active.",
                         "title": "Expiration Date",
                         "format": "date-time"
                       }
