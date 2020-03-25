@@ -26,6 +26,7 @@ The queries automatically append a wildcard (*) so searches for "Micro" will mat
 ### Advanced Search
 Advanced search can be executed by prepending the query field such as:
 ![enter image description here](./images/connector.sam.search.advanced.png)
+
 Will search only the Legal Business Name field for "Microsoft*"
 
 See the available advanced search fields and Boolean logic on the  [API Documentation](https://gsa.github.io/sam_api/sam/search.html)
@@ -39,5 +40,5 @@ The results include the values described in the [API Documentation](https://gsa.
 This returns a detailed description of the business identified by the DUNS+4 number.  Note that this *requires* a DUNS+4 number.  DUNS+4 numbers are 13 digits.  Typically a nine-digit DUNS number can be converted to a DUNS+4 number by appending "0000".  The results from a **Search SAM Database** query returns fields "DUNS" and "DUNS+4" which can be concatenated to create a DUNS+4 number.
 Definitions of the output fields are on the [API Documentation](https://gsa.github.io/sam_api/sam/getdatafields.html).
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTU4ODUzMjYyNF19
+eyJoaXN0b3J5IjpbLTIwNTU0Mzg0NjZdfQ==
 -->
