@@ -3,6 +3,7 @@
 
 Power Platform Custom Connector for the GSA SAM API (https://gsa.github.io/sam_api/sam/console/). This is a Power Platform custom connector for interacting with the US Government's General Servies Administration (GSA) System for Award Management (SAM) database. This is a database of US Government contractors. 
 For an example of how to deploy this connector to Power Automate, see this video: 
+
 [![Deploying A Custom Connector](http://img.youtube.com/vi/XrWcPgEtxdo/0.jpg)](http://www.youtube.com/watch?v=XrWcPgEtxdo "Deploying A Custom Connector")
 # API Key
 All calls to the GSA SAM API require an API key.  The process for betting that API is described on the GSA API site here: [https://gsa.github.io/sam_api/sam/key](https://gsa.github.io/sam_api/sam/key)
@@ -38,5 +39,5 @@ The results include the values described in the [API Documentation](https://gsa.
 This returns a detailed description of the business identified by the DUNS+4 number.  Note that this *requires* a DUNS+4 number.  DUNS+4 numbers are 13 digits.  Typically a nine-digit DUNS number can be converted to a DUNS+4 number by appending "0000".  The results from a **Search SAM Database** query returns fields "DUNS" and "DUNS+4" which can be concatenated to create a DUNS+4 number.
 Definitions of the output fields are on the [API Documentation](https://gsa.github.io/sam_api/sam/getdatafields.html).
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTg1MzkzNDU5MF19
+eyJoaXN0b3J5IjpbMTU4ODUzMjYyNF19
 -->
